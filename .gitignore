@@ -1,1 +1,2 @@
-#gitignore
+# ignore all file start with '.'
+.*
