@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="gbk2312"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>拖放</title>
+		<style type="text/css">
+			div{
+				width:200px; 
+				height:150px;
+				padding:10px;
+				margin:5px;
+				border:1px solid #00ff00;
+				float:left;
+			}
+		</style>
+		<script type="text/javascript">
+			function allowDrop(ev){
+				ev.preventDefault();
+			}
+
+			function drop(ev){
+				ev.preventDefault();
+				var data=ev.dataTransfer.getData("id");
+				ev.target.appendChild(document.getElementById(data));
+			}
+			
+			function drag(ev){
+				ev.dataTransfer.setData("id",ev.target.id);
+			}
+		</script>
+	</head>
+	<body>
+		<p>把图片拖放到矩形中</p>
+		<div ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div ondrop="drop(event)" ondragover="allowDrop(event)">
+			<img id="dragImageIn" src="picture/butterfly.ico" draggable="true" ondragstart="drag(event)" />
+		</div>
+		<img id="dragImageOut" src="picture/butterfly.ico" draggable="true" ondragstart="drag(event)" />
+		<p id="dragTextTrue" draggable="true" ondragstart="drag(event)">可以拖放</p>
+		<p id="dragTextFalse" draggable="false" ondragstart="drag(event)">不可以拖放</p>
+	</body>
+</html>
