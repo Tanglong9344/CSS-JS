@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="gbk2312"/>
+		<meta name="viewport" content="width=device-width"/>
+		<title>Javascrit</title>
+		<style>
+			div{
+				height:200px;
+				width:160px;
+				float:left;
+				border:1px solid green;
+				margin:5px;
+				padding:5px;
+			}
+			p{
+				text-align:center;
+				margin:5px;
+			}
+			.square{
+				background-color:green;
+				width:68px;
+				margin:2px;
+				text-align:center;
+				height:75px;
+				padding:40px;
+				color:#ffffff;
+			}
+		</style>
+		<script src="js/javascript.js"></script>
+	</head>
+	<body>
+		<div>
+			<p id="text-style">大家好，我是曹操。</p>
+			<button type="button" onclick="changeText()">更改文本</button>
+			<button type="button" onclick="changeStyle()">更改样式</button>
+		</div>
+		<div>
+			<p>点亮灯泡</p>
+			<img src="picture/bulboff.gif" style="height:150px;" id="bulb" onclick="changeImage()"/>
+		</div>
+		<div>
+			<p id="btext" style="font-size:50px;" onclick="blinkText()">一闪一闪亮晶晶</p>
+		</div>
+		<div>
+			<p id="p1">点击按钮，文档将会消失。</p>
+			<button type="button" onclick="removeText()">按钮</button>
+		</div>
+		<div>
+			<input id="inputa" type="text" style="margin:5px;"/>
+			<input id="inputb" type="text" style="margin:5px;"/>
+			<p id="result"">结果</p>
+			<input type="button" value="+" onclick="calculator(this)">
+			<input type="button" value="-" onclick="calculator(this)">
+			<input type="button" value="*" onclick="calculator(this)">
+			<input type="button" value="/" onclick="calculator(this)">
+		</div>
+		<div>
+			<p id="tim">time</p><br/>
+			<button type="button" onclick="cur_time()">查看时间</button>
+		</div>
+		<div>
+			<p id="tag">visitTag</p><br/>
+			<input type="button" value="查看" onClick="visitTag()"/>
+		</div>
+		<div>
+			<input type="text" id="txt"/>
+			<input type="button" value="开始计时！" onClick="timedCount()"style="margin:5px;"/>
+			<input type="button" value="停止计时！" onClick="stopCount()"style="margin:5px;"/>
+			<input type="button" value="重新计时！" onClick="clearCount()"style="margin:5px;"/>
+		</div>
+		<div>
+			<p id="clock">钟表</p><br/>
+			<input type="button" value="查看时间" onclick="clock()"/>
+		</div>
+		<div>
+			<p id="pp">我可能会消失喔。</p>
+			<input type="button" value="隐藏" 
+				onClick="document.getElementById('pp').style.visibility='hidden'"/>
+			<input type="button" value="显示" 
+				onClick="document.getElementById('pp').style.visibility='visible'"/>
+		</div>
+		<div>
+			<p class="frame">输入字母:</p>
+			<input type="text" id="al" onchange="onChange()" onfocus="this.style.backgroundColor='#ff0'">
+		</div>
+		<!-- 鼠标移入和移出 -->
+		<div>
+			<p class="square" 
+				onmouseover="this.innerHTML='Welcome here.'" 
+				onmouseout="this.innerHTML='Move the mouse here.'">
+				Move the mouse here.
+			</p>
+		</div>
+		<div>
+			<p class="square" onmousedown="mDown(this)"onmouseup="mUp(this)">移动鼠标到此处</p>
+		</div>
+		<div>
+			<p id="win" onclick="bomWin()">点击查看窗口高度和宽度</p>
+		</div>
+		<div>
+			<p id="scr" onclick="bomScr()">点击查看屏幕高度和宽度</p>
+		</div>
+		<div>
+			<button onclick="show_confirm()">提示框按钮</button>
+		</div>
+		<div>
+			<p id="prompt">提示信息</p>
+			<button onclick="dp_prompt()" style="margin:5px;">按钮</button>
+		</div>
+		<div style="width:100%;">
+			<p id="loc" onClick="bomLoc()">点击进行页面定位</p>
+		</div>
+	</body>
+</hml>
