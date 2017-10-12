@@ -1,0 +1,102 @@
+/*公共部分*/
+.public{
+	width:100px;
+	height:100px;
+	float:left;
+	background-color:red;
+	color:green;
+	text-align:center;
+	padding:20px;
+	margin:5px;
+	border:2px solid black;
+}
+/*颜色变化*/
+div.animation-color{
+	animation-timing-function:linear;
+	animation-name:animation-color;
+	animation-duration:5s;
+	animation-delay:0.1s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	animation-play-state:running;
+}
+@keyframes animation-color{
+	from {background-color:red;}
+	to   {background-color:yellow;}
+}
+
+/*颜色变化另一种书写方式*/
+div.animation-color-another{
+	animation:animation-color-another 5s linear 1s infinite alternate; //比上一个变化更简洁的写法
+}
+@keyframes animation-color-another{
+	0%   {background:#ff0000;}
+	25%  {background:#ffff00;}
+	50%  {background:#0000ff;}
+	75%  {background:#00ff00;}
+	100% {background:#00ffff;}
+}
+
+/*颜色位置变化*/
+div.animation-color-position{
+	position:relative;
+	animation:animation-color-position 5s linear 0.1s infinite alternate; 
+}
+@keyframes animation-color-position{
+	0%   {background:#ff0000;left:0px;top:0px;}
+	25%  {background:#ffff00;left:400px;top:0px;}
+	50%  {background:#0000ff;left:400px;top:300px;}
+	75%  {background:#00ff00;left:0px;top:300px;}
+	100% {background:#00ffff;left:0px;top:0px;}
+}/*公共部分*/
+.public{
+	width:100px;
+	height:100px;
+	float:left;
+	background-color:red;
+	color:green;
+	text-align:center;
+	padding:20px;
+	margin:5px;
+	border:2px solid black;
+}
+/*颜色变化*/
+div.animation-color{
+	animation-timing-function:linear;
+	animation-name:animation-color;
+	animation-duration:5s;
+	animation-delay:0.1s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	animation-play-state:running;
+}
+@keyframes animation-color{
+	from {background-color:red;}
+	to   {background-color:yellow;}
+}
+
+/*颜色变化另一种书写方式*/
+div.animation-color-another{
+	//比上一个变化更简洁的写法
+	animation:animation-color-another 5s linear 1s infinite alternate; 
+}
+@keyframes animation-color-another{
+	0%   {background:#ff0000;}
+	25%  {background:#ffff00;}
+	50%  {background:#0000ff;}
+	75%  {background:#00ff00;}
+	100% {background:#00ffff;}
+}
+
+/*颜色位置变化*/
+div.animation-color-position{
+	position:relative;
+	animation:animation-color-position 5s linear 0.1s infinite alternate; 
+}
+@keyframes animation-color-position{
+	0%   {background:#ff0000;left:0px;top:0px;}
+	25%  {background:#ffff00;left:400px;top:0px;}
+	50%  {background:#0000ff;left:400px;top:300px;}
+	75%  {background:#00ff00;left:0px;top:300px;}
+	100% {background:#00ffff;left:0px;top:0px;}
+}
