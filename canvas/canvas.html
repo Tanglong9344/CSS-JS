@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8"/>
+		<title>画布Canvas</title>
+		<style>
+			.cvs{
+				width:210px;
+				height:250px;
+				border:1px solid #ff0000;
+				float:left;
+				margin:5px;
+			}
+			p{text-align:center;}
+			canvas{
+				border:1px solid #00ff00;
+				width:65%;
+				height:65%;
+				margin:0 35px 0 35px;//top left bottom right
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cvs">
+			<p>椭圆</p>
+			<canvas id="myCanvasArc">
+			</canvas>
+		</div>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvasArc");
+			var cxt=c.getContext("2d");
+			cxt.fillStyle="#ff0000";
+			cxt.beginPath();
+			cxt.arc(155,75,60,0,Math.PI*2,true);
+			cxt.closePath();
+			cxt.fill();
+		</script>
+
+		<div class="cvs">
+			<p>直线</p>
+			<canvas id="myCanvasLine">
+			</canvas>
+		</div>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvasLine");
+			var cxt=c.getContext("2d");
+			cxt.moveTo(30,5);
+			cxt.lineTo(280,120);
+			cxt.lineTo(20,120);
+			cxt.stroke();
+		</script>
+		
+		<div class="cvs">
+			<p>矩形</p>
+			<canvas id="myCanvasRec">
+			</canvas>
+		</div>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvasRec");
+			var cxt=c.getContext("2d");
+			cxt.fillStyle="#a55a5a";
+			cxt.fillRect(25,10,250,125);
+		</script>
+
+		<div class="cvs">
+			<p>图片</p>
+			<canvas id="myCanvasImage">
+			</canvas>
+		</div>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvasImage");
+			var cxt=c.getContext("2d");
+			var img=new Image();
+			img.src="picture/monkey.gif";
+			cxt.drawImage(img,115,45);
+		</script>
+		
+		<div class="cvs">
+			<p>渐变色</p>
+			<canvas id="myCanvasGradient">
+			</canvas>
+		</div>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvasGradient");
+			var cxt=c.getContext("2d");
+			var grd=cxt.createLinearGradient(25,10,250,125);
+			grd.addColorStop(0,"#FF0000");
+			grd.addColorStop(1,"#00FF00");
+			cxt.fillStyle=grd;
+			cxt.fillRect(25,10,250,125);
+		</script>
+		<div class="cvs">
+			<p>悬停鼠标查看坐标</p>
+			<canvas id="myCanvas" style="height:60%;" onmousemove="cnvs_getXY(event)" onmouseout="cnvs_clearXY()">
+			</canvas>
+			<p id="xy"></p>
+		</div>
+		<script type="text/javascript">
+			/*获取坐标*/
+			function cnvs_getXY(e){
+				x=e.clientX;
+				y=e.clientY;
+				document.getElementById("xy").innerHTML="坐标(" + x + "," + y + ")";
+			}
+			/*清空数据*/
+			function cnvs_clearXY(){
+				document.getElementById("xy").innerHTML="";
+			}
+		</script>
+	</body>
+</html>
