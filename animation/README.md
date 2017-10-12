@@ -1,3 +1,3 @@
-### CSS3动画
+﻿### CSS3动画
 ---
-![animation.png](https://github.com/Tanglong9344/CSS-JS/blob/master/animation/picture/animation.png)
+![animation.png](https://github.com/Tanglong9344/CSS-JS/blob/master/animation/picture/animation.PNG)
