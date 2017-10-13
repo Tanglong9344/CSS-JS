@@ -1,5 +1,5 @@
 ### 目录
-+ [圆形进度条](https://github.com/Tanglong9344/CSS-JS/tree/master/Circular-progress-bar)
++ [圆形进度条](https://github.com/Tanglong9344/CSS-JS/tree/master/progress-bar)
 + [画布](https://github.com/Tanglong9344/CSS-JS/tree/master/canvas)
 + [动画](https://github.com/Tanglong9344/CSS-JS/tree/master/animation)
 + [圆角和阴影](https://github.com/Tanglong9344/CSS-JS/tree/master/radiusShadow)
