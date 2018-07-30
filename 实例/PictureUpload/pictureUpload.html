@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0, 	
+			maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="pictureUpload.css">
+		<script type="text/javascript" src="pictureUpload.js"></script>
+		<title>图片上传</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="z_photo">
+				<div class="z_file">
+					<input type="file" name="file" id="file" accept="image/*" 
+						multiple onchange="imgChange('z_photo','z_file');"/>
+				</div>
+			</div>
+			<div class="z_mask">
+				<div class="z_alert">
+					<p>确定要删除这张图片吗？</p>
+					<p>
+						<span class="z_cancel">取消</span>
+						<span class="z_sure">确定</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

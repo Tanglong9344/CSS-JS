@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="gbk"/>
+		<meta name="viewport" content="width=device-width"/>
+		<title>一个动画</title>
+		<style>
+			div.animation-color{
+				width:100px;
+				height:100px;
+				float:left;
+				background-color:red;
+				color:green;
+				text-align:center;
+				padding:20px;
+				margin:5px;
+				border:2px solid black;
+				position:relative;
+				animation:animation-play 15s linear 0.1s infinite alternate; 
+			}
+			@keyframes animation-play{
+				0%   {background:#ff0000;left:0px;top:0px;}
+				25%  {background:#ffff00;left:80%;top:0px;}
+				50%  {background:#0000ff;left:80%;top:210px;}
+				75%  {background:#00ff00;left:0px;top:210px;}
+				100% {background:#00ffff;left:0px;top:0px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="animation-color">
+			<img src="picture/smile.jpg" height="65px" width="75px" alt="smile.jpg"/>
+		</div>
+	</body>
+</html>

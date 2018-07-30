@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>主页面</title>
+    <link href="css/all.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+    </header>
+    <section>
+      <div id="main_part">
+        <div class="wrap">
+          <p id="font_bold">章节</p>
+          <div class="circle"></div>
+          <div class="circle_left" id="cl"></div>
+          <div class="circle_right" id="cr"></div>
+          <div class="rate"><span id="cRateVal">0</span>%</div>
+          <div class="done">共<span id="total">100</span>章,已完成<span id="finished">25</span>章</div>
+        </div>
+        <div class="wrap">
+          <p id="font_bold">题目</p>
+          <div class="circle"></div>
+          <div class="circle_left" id="clp"></div>
+          <div class="circle_right" id="crp"></div>
+          <div class="rate"><span id="cRateValp">0</span>%</div>
+          <div class="done">共<span id="totalp">1000</span>题,已完成<span id="finishedp">750</span>题</div>
+        </div>
+        <div class="wrap" style="float:right;">
+          <div id="font_bold"style="color:gray;">返回</div>
+          <div class="self_btn" onclick="javascript:history.back(-1);" title="返回登录页面">
+            <div class="contain_circle_rec">
+              <div class="self_circle"></div>
+              <div class="self_rec"></div>
+            </div>
+            <div class="contain_circle_rec">
+              <div class="self_circle"></div>
+              <div class="self_rec"></div>
+            </div>
+            <div class="contain_circle_rec">
+              <div class="self_circle"></div>
+              <div class="self_rec"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <footer>
+    <div style="width:100%;height:40px;"></div>
+  </footer>
+  </body>
+</html>

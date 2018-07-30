@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="gbk2312"/>
+		<title>圆角和阴影</title>
+		<style>
+			/*公共属性*/
+			div.public{
+				text-align:center;
+				width:300px;
+				height:100px;
+				float:left;
+				margin:6px;	
+				font-size:30px;	
+				border:2px solid #a1a1a1;	
+				padding:10px 40px; 				
+			}
+			/*添加圆角*/
+			div.radius{
+				background:#dddddd;
+				border-radius:25px;
+			}
+
+			/*添加阴影*/
+			div.shadow{
+				background-color:#ff9900;
+				box-shadow: 20px 30px 15px #888888;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="public">没有圆角和阴影。</div>
+		<div class="public radius">border-radius 属性为元素设置圆角。</div>
+		<div class="public shadow">border-shadow 属性向元素添加阴影。</div>
+	</body>
+</html>
