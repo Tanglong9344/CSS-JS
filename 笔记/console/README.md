@@ -68,3 +68,10 @@ Elements下的html内容
 ---
 + 复制
   + copy($0):将$0对应的内容复制到剪贴板
++ 快捷键
+  + ctrl + p:在sources中搜索文件
+  + ctrl + g:在sources中跳到指定行
+  + ctrl + f:在Elements中搜索内容
+  + ctrl + shift + p:在Elements中全局搜索
++ 源码格式化
+  + sources中，左下角：Pretty print({})
