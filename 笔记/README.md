@@ -3,7 +3,7 @@
 + [Jquery](1.md)
 + [CSS](6.md)
 + [ajax、ajaxFileUpload](5.md)
-+ [java：1.文件下载](2.md)
++ [java：1.文件下载，2.@ResponseBody](2.md)
 + [java 日期格式化格式](7.md)
 + [c标签](3.md)
 + [fmt标签](4.md)
