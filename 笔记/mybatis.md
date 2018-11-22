@@ -14,7 +14,7 @@
 ```xml
 <association property="当前表字段" column="{para11=para21,para12=para22} select="对应apper.xml的select方法"/>
 ```
-+ collection 一对多
++ collection 一对多(也包括一对一)
 ```xml
 <collection property="当前表字段" column="{para11=para21,para12=para22} select="对Mapper.xml的select方法"/>
 ```
