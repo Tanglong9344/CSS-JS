@@ -22,3 +22,15 @@
 ```xml
 <selectKey keyProperty="id" resultType="long">select @@identity</selectKey>
 ```
+3. 缓存
+```xml
+*select语句：
+
+flushCache默认为false，不清空本地缓存和二级缓存。
+
+useCache默认为true，将查询结果进行二级缓存。
+
+*insert、update、delete语句：
+
+flushCache默认为true，清空本地缓存和二级缓存。
+```
