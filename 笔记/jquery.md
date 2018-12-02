@@ -56,7 +56,7 @@ if(userName === undefined){alert("Hello undefined!")}
 7. 小数
 ```js
 var f1 = 3.1415926;
-f1 = f1.toFixed(2) // 结果3.14
+f1 = f1.toFixed(2) // 结果3.14(注意：toFixed()方法返回的是String)
 
 var f2 = 3.1415926;
 f2 = Math.floor(f2* 100) / 100 // 结果3.14
