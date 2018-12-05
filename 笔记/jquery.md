@@ -168,3 +168,33 @@ $(function () {
 输出结果
 ---
 ![js_jstl.png](pictures/js_jstl.png)
+
++ js中""," ",0,"0",null,false,undefined的比较
+```js
+var val1 = 0
+var val2 = ""
+var val3 = " "
+var val4 = "0"
+var val5 = null
+var val6 = false
+var val0 = undefined
+var valArr = [val0,val1,val2,val3,val4,val5,val6]
+var len = valArr.length - 1;
+for(var i=len;i>=0;i--){
+    for(var j=0;j<i;j++){
+        var result = "[" + valArr[i] + "] == [" + valArr[j] + "]: ";
+        var isEqual = (valArr[i] == valArr[j]);
+        console.log( result + isEqual)
+    }
+}
+/*
+根据结果：
+1. false == 0 == "" == " "
+2. undefined == null
+3. 1中的和2中的互不相等
+*/
+```
+---
+输出结果
+---
+![jsValCompare.png](pictures/jsValCompare.png)
