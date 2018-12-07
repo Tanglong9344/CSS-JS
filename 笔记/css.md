@@ -94,18 +94,18 @@
 			float:left;
 			display:block;
 		}
-		#fistChild+div{background-color:#ff0;} /* 相邻兄弟选择器 */
+		.fistChild+div{background-color:#ff0;} /* 相邻兄弟选择器 */
 		#secondChild~div{background-color:#00f;} /* 所有兄弟选择器 */
 	</style>
 	<body>
 		<div class="parent sizePosition">
-			<div id="fistChild"></div>
+			<div class="firstChild"></div>
 			<div></div>
 			<div></div>
 			<div></div>
 		</div>
 		<div class="parent sizePosition">
-			<div id="fistChild"></div>
+			<div class="firstChild"></div>
 			<div id="secondChild"></div>
 			<div></div>
 			<div></div>
