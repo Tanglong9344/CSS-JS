@@ -115,3 +115,29 @@
   + 结果
   ---
   ![childSibling.png](pictures/cssPriority/childSibling.png)
+  + 大小写
+  ```html
+  <style>
+	.upper{text-transform:uppercase;}
+	.lower{text-transform:lowercase;}
+	.capit{text-transform:capitalize;}
+	.sizePosition
+		{
+			width:300px;
+			height:300px;
+			margin:100px 10px 0 30px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#000;
+			color:#fff;
+			text-align:center;
+		}
+	</style>
+	<div class="sizePosition upper">text transform</div>
+	<div class="sizePosition lower">text transform</div>
+	<div class="sizePosition capit">text transform</div>
+  ```
+  + 结果
+  ---
+  ![fontSize.png](pictures/cssPriority/fontSize.png)
