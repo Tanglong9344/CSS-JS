@@ -141,3 +141,30 @@
   + 结果
   ---
   ![fontSize.png](pictures/cssPriority/fontSize.png)
+  + cite
+  ```html
+  	<style type="text/css">
+		.sizePosition
+		{
+			width:300px;
+			height:300px;
+			margin:100px 10px 0 30px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#000;
+			color:#fff;
+		}
+	</style>
+	<body>
+		<div class="sizePosition">
+			<blockquote>床前明月光，疑是地上霜。
+				<br/>
+            	<small><cite title="《静夜思》">题目</cite>，<cite title="李白">作者</cite></small>
+			</blockquote>
+		</div>
+	</body>
+   ```
+   + 结果
+   ---
+  ![cite.png](pictures/cssPriority/cite.png)
