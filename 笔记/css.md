@@ -168,3 +168,51 @@
    + 结果
    ---
   ![cite.png](pictures/cssPriority/cite.png)
+  + 列表
+  ```html
+  	<style type="text/css">
+		.sizePosition
+		{
+			width:400px;
+			height:400px;
+			margin:100px 10px 0 30px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#f5f5f5;
+			color:#000;
+		}
+		.list-inline {list-style: none;}
+		.list-inline > li {display: inline-block;}
+	</style>
+	<div class="sizePosition">
+		<ul>
+			<li>水果</li><!-- 无序 -->
+			<ul title="fruit">
+				<li>苹果</li>
+				<li>香蕉</li>
+			</ul>
+			<li>蔬菜</li><!-- 有序 -->
+			<ol title="vegetable">
+				<li>黄瓜</li>
+				<li>土豆</li>
+			</ol>
+			<li>开发语言</li><!-- 去除列表项前的符号 -->
+			<ul title="develop language" style="list-style:none;">
+				<li>C</li>
+				<li>Java</li>
+				<li>Js</li>
+			</ul>
+			<li>操作系统</li><!-- 水平显示 -->
+			<ul title="os" class="list-inline">
+				<li>Mac</li>
+				<li>Windows</li>
+				<li>Ios</li>
+				<li>Android</li>
+			</ul>
+		</ul>
+	</div>
+  ```
+  + 结果
+  ---
+  ![ul_li.png](pictures/cssPriority/ul_li.png)
