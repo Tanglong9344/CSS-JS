@@ -15,3 +15,6 @@
           user-scalable=no"
     />
     ```
++ 行级元素样式
+---
+![rowStyle.png](pictures/BootStrap/rowStyle.png)
