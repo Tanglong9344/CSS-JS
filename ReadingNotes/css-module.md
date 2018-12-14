@@ -434,3 +434,169 @@
 ```
 ---
 ![cikonss.png](pictures/BootStrap/cikonss.png)
++ 下拉菜单
+```html
+<head>
+  <link 
+rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.sizePosition
+	{
+		width:325px;
+		height:330px;
+		margin:115px 10px 0 30px;
+		padding:10px;
+		float:left;
+		display:block;
+		background-color:#f5f5f5;
+		color:#000;
+		font-size:28px
+	}
+	.sizePosition>div{float:left;}
+	.sizePosition>div + div{margin-left:10px;}
+</style>
+<body>
+	<div class="sizePosition"><!-- 向下弹出 -->
+		<div class="dropdown">
+		  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" 
+			  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			  水果<span class="caret"></span></button>
+		  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+		  	<li><a href="#">苹果</a></li>
+		    <li><a href="#">香蕉</a></li>
+		    <li role="separator" class="divider"></li><!-- 分割线 -->
+		    <li><a href="#">番茄</a></li>
+		  </ul>
+		</div>
+
+		<div class="dropup"><!-- 向上弹出 -->
+		  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" 
+			  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			  水果<span class="caret"></span></button>
+		  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+		  	<li><a href="#">苹果</a></li>
+		    <li><a href="#">香蕉</a></li>
+		    <li role="separator" class="divider"></li>
+		    <li><a href="#">番茄</a></li>
+		  </ul>
+		</div>
+
+		<div class="dropdown">
+		  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" 
+			  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			  水果<span class="caret"></span></button>
+		  <!-- 菜单项右边界与父元素右边界对齐(默认左对齐) -->
+		  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+		  	<li><a href="#">苹果</a></li>
+		    <li class="disabled"><a href="#">香蕉</a></li><!-- 禁用 -->
+		    <li role="separator" class="divider"></li>
+		    <li><a href="#">番茄</a></li>
+		  </ul>
+		</div>
+	</div>
+</body>
+```
+---
+![dropdown.png](pictures/BootStrap/dropdown.png)
++ 按钮组
+```html
+	<head>
+  <link 
+rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+	.sizePosition
+	{
+		width:500px;
+		height:330px;
+		margin:115px 10px 0 30px;
+		padding:10px;
+		float:left;
+		display:block;
+		background-color:#f5f5f5;
+		color:#000;
+		font-size:28px
+	}
+	.sizePosition>div + div{margin-top:10px;}
+</style>
+<body>
+	<div class="sizePosition">
+		<div class="btn-group" role="group"><!-- 按钮组 -->
+			<button type="button" class="btn btn-default">很好</button>
+		  	<button type="button" class="btn btn-default">一般</button>
+		  	<button type="button" class="btn btn-default">不好</button>
+		</div>
+
+		<div class="btn-toolbar" role="toolbar"><!-- 与toolbar结合 -->
+			<div class="btn-group btn-group-lg" role="group">
+				<button type="button" class="btn btn-default">很好</button>
+			  	<button type="button" class="btn btn-default">一般</button>
+			  	<button type="button" class="btn btn-default">不好</button>
+			</div>
+
+		 	<div class="btn-group" role="group">
+				<button type="button" class="btn btn-default">很好</button>
+			  	<button type="button" class="btn btn-default">一般</button>
+			</div>
+
+			<div class="btn-group btn-group-sm" role="group">
+				<button type="button" class="btn btn-default">很好</button>
+			</div>
+
+			<div class="btn-group btn-group-xs" role="group">
+				<button type="button" class="btn btn-default">很好</button>
+			</div>
+		</div>
+
+		<div class="btn-group" role="group"><!-- 与dropdown结合 -->
+			<button type="button" class="btn btn-default">很好</button>
+		  	<div class="btn-group" role="group">
+				<button class="btn btn-default dropdown-toggle" type="button" 
+				id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" 
+				aria-expanded="true">其它<span class="caret"></span></button>
+			  	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			  		<li><a href="#">一般</a></li>
+			    	<li><a href="#">不好</a></li>
+			  	</ul>
+			</div>
+		</div>
+
+		<div class="btn-group-vertical" role="group"><!-- 垂直按钮 -->
+			<button type="button" class="btn btn-default">很好</button>
+		  	<button type="button" class="btn btn-default">一般</button>
+		  	<button type="button" class="btn btn-default">不好</button>
+		</div>
+
+		<div class="btn-group" role="group"><!-- 按钮颜色 -->
+			<button type="button" class="btn">原色</button>
+			<button type="button" class="btn btn-default">默认</button>
+		  	<button type="button" class="btn btn-primary">一般</button>
+		  	<button type="button" class="btn btn-info">信息</button>
+		  	<button type="button" class="btn btn-warning">警告</button>
+		  	<button type="button" class="btn btn-danger">危险</button>
+		  	<button type="button" class="btn btn-success">成功</button>
+		</div>
+
+		<div class="btn-group" role="group"><!-- 分裂式按钮下拉菜单 -->
+			<button type="button" class="btn btn-success">颜色</button>
+			<button type="button" class="btn btn-success dropdown-toggle" 
+				id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" 
+				aria-expanded="false">
+			<span style="visibility:hidden;">&nbsp;</span><span class="caret"</span>
+			</button>
+		  	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+		  		<li><a href="#">红色</a></li>
+		    	<li><a href="#">绿色</a></li>
+		    	<li><a href="#">蓝色</a></li>
+		  	</ul>
+		</div>
+	</div>
+</body>
+```
+---
+![btn-group.png](pictures/BootStrap/btn-group.png)
