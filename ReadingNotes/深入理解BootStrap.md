@@ -349,7 +349,7 @@
 	![css-icon.png](pictures/BootStrap/css-icon.png)
 	+ awesome图标
 	```html
-		<head>
+	<head>
 	  <link rel="stylesheet" 
 	  href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" 
 	  integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" 
@@ -433,3 +433,46 @@
 	```
 	---
 	![css-module-fontAwesome.png](pictures/BootStrap/css-module-fontAwesome.png)
+	+ 图标与其它CSS结合
+	```html
+	<head>
+	  <link rel="stylesheet" 
+	  href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" 
+	  integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" 
+	  crossorigin="anonymous">
+	</head>
+	<style>
+		.sizePosition
+		{
+			width:96%;
+			height:250px;
+			margin:10px 10px 10px 10px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#f5f5f5;
+			color:#000;
+			font-size:28px
+		}
+		.sizePosition>p{font-size:15px;position:relative;left:0;top:0;margin-bottom:0;}
+		.fa-spinner{animation: loading 1.5s infinite linear;}
+		@keyframes loading
+		{
+			0%   {transform:rotate(0deg);}
+			100% {transform:rotate(360deg);}
+		}
+	</style>
+	<body lang="zh-cn"><!-- font-awesome图标 -->
+		<div class="sizePosition" style="height:160px;">
+			<p>css样式</p>
+			<!-- 背景色 -->
+			<i class="fab fa-android" style="font-size:4em;background-color:#ff0;"></i>
+			<!--顺时针旋转30度  -->
+			<i class="fab fa-android" style="font-size:4em;transform:rotate(30deg);"></i>
+			<i class="fab fa-twitter" style="font-size:4em;"></i>
+			<i class="fas fa-spinner" style="font-size:4em;"></i><!-- 动画实现loading -->
+		</div>
+	</body>
+        ```
+---
+![css-loading.gif](pictures/BootStrap/css-loading.gif)
