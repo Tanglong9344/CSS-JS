@@ -473,6 +473,74 @@
 			<i class="fas fa-spinner" style="font-size:4em;"></i><!-- 动画实现loading -->
 		</div>
 	</body>
-        ```
----
-![css-loading.gif](pictures/BootStrap/css-loading.gif)
+      ```
+      ---
+      ![css-loading.gif](pictures/BootStrap/css-loading.gif)
+      + [cikonss](http://www.bootcss.com/p/cikonss/)
+      ```html
+       	<head><link rel="stylesheet" href="cikonss.css"/></head>
+	<style>
+		.sizePosition
+		{
+			width:90%;
+			height:250px;
+			margin:10px 10px 10px 10px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#f5f5f5;
+			color:#000;
+			font-size:28px
+		}
+		.sizePosition>span{margin:10px 10px 10px 10px;}
+	</style>
+	<body>
+		<div class="sizePosition">
+			<span class="icon icon-mid"><span class="icon-home"></span></span>
+			<span class="icon icon-mid"><span class="icon-mail"></span></span>
+			<span class="icon icon-mid"><span class="icon-plus"></span></span>
+			<span class="icon icon-mid"><span class="icon-minus"></span></span>
+			<span class="icon icon-mid"><span class="icon-file"></span></span>
+			<span class="icon icon-mid"><span class="icon-folder"></span></span>
+			<span class="icon icon-mid"><span class="icon-tag"></span></span>
+			<span class="icon icon-mid"><span class="icon-desktop"></span></span>
+			<span class="icon icon-mid"><span class="icon-tablet"></span></span>
+			<span class="icon icon-mid"><span class="icon-phone"></span></span>
+			<span class="icon icon-mid"><span class="icon-menu"></span></span>
+			<span class="icon icon-mid"><span class="icon-calendar"></span></span>
+			<span class="icon icon-mid"><span class="icon-comment"></span></span>
+			<span class="icon icon-mid"><span class="icon-comment-text"></span></span>
+			<span class="icon icon-mid"><span class="icon-arrowUp"></span></span>
+			<span class="icon icon-mid"><span class="icon-arrowDown"></span></span>
+			<span class="icon icon-mid"><span class="icon-arrowLeft"></span></span>
+			<span class="icon icon-mid"><span class="icon-arrowRight"></span></span>
+			<span class="icon icon-mid"><span class="icon-download"></span></span>
+			<span class="icon icon-mid"><span class="icon-upload"></span></span>
+			<span class="icon icon-mid"><span class="icon-tpl-full"></span></span>
+			<span class="icon icon-mid"><span class="icon-tpl-side-r"></span></span>
+			<span class="icon icon-mid"><span class="icon-tpl-side-l"></span></span>
+			<span class="icon icon-mid"><span class="icon-list-view"></span></span>
+			<span class="icon icon-mid"><span class="icon-grid-view"></span></span>
+			<span class="icon icon-mid"><span class="icon-camera"></span></span>
+			<span class="icon icon-mid"><span class="icon-image"></span></span>
+			<span class="icon icon-mid"><span class="icon-play"></span></span>
+			<span class="icon icon-mid"><span class="icon-stop"></span></span>
+			<span class="icon icon-mid"><span class="icon-pause"></span></span>
+			<span class="icon icon-mid"><span class="icon-forward"></span></span>
+			<span class="icon icon-mid"><span class="icon-rewind"></span></span>
+			<span class="icon icon-mid"><span class="icon-next"></span></span>
+			<span class="icon icon-mid"><span class="icon-prev"></span></span>
+			<span class="icon icon-mid"><span class="icon-stats"></span></span>
+			<span class="icon icon-mid"><span class="icon-battery-empty"></span></span>
+			<span class="icon icon-mid"><span class="icon-battery-1_4"></span></span>
+			<span class="icon icon-mid"><span class="icon-battery-half"></span></span>
+			<span class="icon icon-mid"><span class="icon-battery-3_4"></span></span>
+			<span class="icon icon-mid"><span class="icon-battery-full"></span></span>
+			<span class="icon icon-mid"><span class="icon-sound-mute"></span></span>
+			<span class="icon icon-mid"><span class="icon-sound-normal"></span></span>
+			<span class="icon icon-mid"><span class="icon-sound-loud"></span></span>
+		</div>
+	</body>
+      ```
+     ---
+     ![cikonss.png](pictures/BootStrap/cikonss.png)
