@@ -216,3 +216,45 @@
   + 结果
   ---
   ![ul_li.png](pictures/cssPriority/ul_li.png)
+  + 动画
+  ```html
+  	<style>
+		.sizePosition
+		{
+			width:300px;
+			height:300px;
+			margin:100px 10px 0 30px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#000;
+		}
+		.sizePosition>div /* 子选择器 */
+		{
+			width:100px;
+			height:100px;
+			margin:10px;
+			float:left;
+			display:block;
+			background-color:#fff;
+			border-top-left-radius:50%;
+			animation: loading 1.5s infinite linear;
+		}
+		@keyframes loading
+		{
+			0%   {transform:rotate(0deg);}
+			100% {transform:rotate(360deg);}
+		}
+	</style>
+	<body>
+		<div class="parent sizePosition">
+			<div></div>
+			<div style="border-top-left-radius:0;"></div>
+			<div style="border-radius:30%;"></div>
+			<div style="border-radius:50%;"></div>
+		</div>
+	</body>
+  ```
+  + 结果
+  ---
+  ![animation.gif](pictures/cssPriority/animation.gif)
