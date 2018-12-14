@@ -347,3 +347,89 @@
 	```
 	---
 	![css-icon.png](pictures/BootStrap/css-icon.png)
+	+ awesome图标
+	```html
+		<head>
+	  <link rel="stylesheet" 
+	  href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" 
+	  integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" 
+	  crossorigin="anonymous">
+	</head>
+	<style>
+		.sizePosition
+		{
+			width:96%;
+			height:250px;
+			margin:10px 10px 10px 10px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#f5f5f5;
+			color:#000;
+			font-size:28px
+		}
+		.sizePosition>p{font-size:15px;position:relative;left:0;top:0;margin-bottom:0;}
+	</style>
+	<body><!-- font-awesome图标 -->
+		<div class="sizePosition" style="height:160px;"><!-- 图标类型-->
+			<p>图标类型</p>
+			<i class="fab fa-android" style="font-size:4em;"></i>
+			<i class="fab fa-apple" style="font-size:4em;"></i>
+			<i class="fab fa-alipay" style="font-size:4em;"></i>
+			<i class="fab fa-amazon" style="font-size:4em;"></i>
+			<i class="fas fa-apple-alt" style="font-size:4em;"></i>
+			<i class="fas fa-angry" style="font-size:4em;"></i>
+			<i class="fas fa-acorn" style="font-size:4em;"></i>
+			<i class="fas fa-bell" style="font-size:4em;"></i>
+			<i class="fas fa-bomb" style="font-size:4em;"></i>
+			<i class="fas fa-brain" style="font-size:4em;"></i>
+			<i class="fas fa-cat" style="font-size:4em;"></i>
+			<i class="fas fa-dog" style="font-size:4em;"></i>
+			<i class="fas fa-comment" style="font-size:4em;"></i>
+			<i class="fas fa-comments" style="font-size:4em;"></i>
+			<i class="fas fa-comment-dots" style="font-size:4em;"></i>
+			<a href="https://fontawesome.com/icons?d=gallery">更多图标</a>
+		</div>
+		<div class="sizePosition" style="height:300px;"><!-- 大小设置 -->
+			<p>大小设置</p>
+			<i class="fab fa-android" style="font-size:.1em;"></i>
+			<i class="fab fa-android" style="font-size:.5em;"></i>
+			<i class="fab fa-android" style="font-size:1em;"></i>
+			<i class="fab fa-android" style="font-size:2em;"></i>
+			<i class="fab fa-android" style="font-size:3em;"></i>
+			<i class="fab fa-android" style="font-size:4em;"></i>
+			<i class="fab fa-android" style="font-size:5em;"></i>
+			<i class="fab fa-android" style="font-size:6em;"></i>
+			<i class="fab fa-android" style="font-size:7em;"></i>
+			<i class="fab fa-android" style="font-size:8em;"></i>
+			<i class="fab fa-android" style="font-size:9em;"></i>
+			<i class="fab fa-android" style="font-size:10em;"></i>
+		</div>
+		<div class="sizePosition"><!-- 颜色设置 -->
+			<p>颜色设置</p>
+			<i class="fab fa-android" style="font-size:4em;color:#f00;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#0f0;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#00f;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#ff0;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#f0f;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#0ff;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#000;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#fff;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#49b8c7;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#e74724;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#ffbf34;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#ff9800;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#4c9424;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#0e88eb;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#1cd248;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#201f1f;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#21fcc4;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#d94fbf;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#204424;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#aaa;"></i>
+			<i class="fab fa-android" style="font-size:4em;color:#660e7a;"></i>
+		</div>
+	</body>
+	```
+	---
+	![css-module-fontAwesome.png](pictures/BootStrap/css-module-fontAwesome.png)
