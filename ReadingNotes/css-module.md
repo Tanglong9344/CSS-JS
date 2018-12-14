@@ -600,3 +600,86 @@ rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bo
 ```
 ---
 ![btn-group.png](pictures/BootStrap/btn-group.png)
++ 输入框组
+```html
+	<head>
+	<link 
+rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<style>
+		.sizePosition
+		{
+			width:500px;
+			height:330px;
+			margin:115px 10px 0 30px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#f5f5f5;
+			color:#000;
+			font-size:28px
+		}
+		.sizePosition>div + div{margin-top:10px;}
+	</style>
+	<body>
+		<div class="sizePosition"><!-- 输入组 -->
+			<div class="input-group">
+				<span class="input-group-addon">姓名</span>
+				<input type="text" class="form-control">
+			</div>
+
+			<div class="input-group">
+				<span class="input-group-addon">邮箱</span>
+				<input type="text" class="form-control">
+				<span class="input-group-addon">@</span>
+				<input type="text" class="form-control">
+				<span class="input-group-addon">.com</span>
+			</div>
+
+			<div class="input-group input-group-lg"><!-- 大小 -->
+				<span class="input-group-addon">姓名</span>
+				<input type="text" class="form-control">
+			</div>
+
+			<div class="input-group">
+				<span class="input-group-addon">姓名</span>
+				<input type="text" class="form-control">
+			</div>
+
+			<div class="input-group input-group-sm">
+				<span class="input-group-addon">姓名</span>
+				<input type="text" class="form-control">
+			</div>
+
+			<div class="input-group">
+			<input type="text" class="form-control">
+		<span class="input-group-btn"><button class="btn btn-success">搜索</button></span>
+			</div>
+
+			<div class="input-group">
+				<input type="text" class="form-control">
+				<span class="input-group-btn">
+				<div class="btn-group" role="group">
+					  <div class="btn-group" role="group">
+					<button class="btn btn-default dropdown-toggle" 
+						type="button" id="dropdownMenu1" 
+						data-toggle="dropdown" aria-haspopup="true" 
+						aria-expanded="true">条件<span class="caret">
+						</span></button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						  <li><a href="#">科技</a></li>
+						    <li><a href="#">娱乐</a></li>
+						    <li><a href="#">音乐</a></li>
+						  </ul>
+					</div>
+					</div>
+					<button class="btn btn-success">搜索</button>
+				</span>
+			</div>
+		</div>
+	</body>
+```
+---
+![input-group.png](pictures/BootStrap/input-group.png)
