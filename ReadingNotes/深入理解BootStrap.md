@@ -17,3 +17,4 @@
 + BootStrap核心
   + [CSS布局](css-layout.md)
   + [CSS组件](css-module.md)
+  + [JavaScript插件](js-plug-in.md)
