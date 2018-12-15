@@ -919,4 +919,4 @@ rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bo
 	</body>
 ```
 ---
-![panel.png](pictures/BootStrap/panle.png)
+![panel.png](pictures/BootStrap/panel.png)
