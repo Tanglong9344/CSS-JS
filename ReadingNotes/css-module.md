@@ -683,3 +683,240 @@ rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bo
 ```
 ---
 ![input-group.png](pictures/BootStrap/input-group.png)
++ 进度条
+```html
+	<head>
+	<link 
+rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<style>
+		.sizePosition
+		{
+			width:250px;
+			height:350px;
+			margin:115px 10px 0 30px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#f5f5f5;
+			color:#000;
+			font-size:28px
+		}
+		.sizePosition>div + div{margin-top:-10px;}
+	</style>
+	<body><!-- 进度条 -->
+		<div class="sizePosition">
+		<div class="progress">
+	  	<div class="progress-bar" style="width:80%;"></div>
+		</div>
+	<div class="progress"><!-- 带提示标签并设置样式 -->
+	  <div class="progress-bar" style="width:66.66%;background-color:#0f0;color:#000;">66.66%</div>
+	</div>
+	</div>
+
+		<div class="sizePosition"><!-- 情景进度条 -->
+			<div class="progress">
+	  		<div class="progress-bar" style="width:80%;">80%</div>
+			</div>
+
+			<div class="progress">
+	  		<div class="progress-bar progress-bar-success" style="width:80%;">80%</div>
+			</div>
+
+			<div class="progress">
+	  		<div class="progress-bar progress-bar-info" style="width:80%;">80%</div>
+			</div>
+
+			<div class="progress">
+	  		<div class="progress-bar progress-bar-danger" style="width:80%;">80%</div>
+			</div>
+
+			<div class="progress">
+	  		<div class="progress-bar progress-bar-warning" style="width:80%;">80%</div>
+			</div>
+
+			<div class="progress"><!-- 条纹 -->
+	  		<div class="progress-bar progress-bar-striped" style="width:80%;">80%</div>
+			</div>
+
+		<div class="progress"><!-- 动画 -->
+	  	<div class="progress-bar progress-bar-striped active" style="width:80%;">80%</div>
+		</div>
+
+		<div class="progress"><!-- 堆叠效果 -->
+	  	<div class="progress-bar progress-bar-success" style="width:33.33%;"></div>
+	  	<div class="progress-bar progress-bar-danger" style="width:33.33%;">99.99%</div>
+	  	<div class="progress-bar progress-bar-info" style="width:33.33%;"></div>
+		</div>
+		</div>
+	</body>
+```
+---
+![progress.png](pictures/BootStrap/progress.png)
++ 列表组
+```html
+	<head>
+	<link 
+rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<style>
+		.sizePosition
+		{
+			width:250px;
+			height:350px;
+			margin:115px 10px 0 30px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#f5f5f5;
+			color:#000;
+			font-size:28px
+		}
+		.sizePosition>div + div{margin-top:-10px;}
+		#sm-ul>li{height:48px;font-size:20px;}
+	</style>
+	<body><!--列表组-->
+		<div class="sizePosition">
+			<ul class="list-group">
+		  		<li class="list-group-item active">西瓜</li>
+		  		<li class="list-group-item">波罗</li>
+		  		<li class="list-group-item">苹果</li>
+		  	</ul>
+		</div>
+
+		<div class="sizePosition"><!--情景颜色  -->
+			<ul class="list-group" id="sm-ul">
+		  		<li class="list-group-item active">选中</li>
+		  		<li class="list-group-item disabled">禁用</li><!-- 禁用 -->
+		  		<li class="list-group-item list-group-item-default">默认</li>
+		  		<li class="list-group-item list-group-item-success">成功</li>
+		  		<li class="list-group-item list-group-item-info">信息</li>
+		  		<li class="list-group-item list-group-item-danger">危险</li>
+		  		<li class="list-group-item list-group-item-warning">警告</li>
+		  	</ul>
+		</div>
+
+		<div class="sizePosition"><!-- 加入徽章 -->
+			<ul class="list-group">
+		  		<li class="list-group-item"><span class="badge">1</span>西瓜</li>
+		  		<li class="list-group-item active"><span class="badge">2</span>波罗</li>
+		  		<li class="list-group-item"><span class="badge">3</span>苹果</li>
+		  	</ul>
+		</div>
+
+		<div class="sizePosition"><!-- 链接 -->
+			<div class="list-group">
+		  		<a href="#" class="list-group-item">西瓜</a>
+		  		<a href="#" class="list-group-item">波罗</a>
+		  		<a href="#" class="list-group-item active">苹果</a>
+		  	</div>
+		</div>
+
+		<div class="sizePosition"><!-- 按钮 -->
+			<div class="list-group">
+		  		<button class="list-group-item">西瓜</button>
+		  		<button class="list-group-item">波罗</button>
+		  		<button class="list-group-item active">苹果</button>
+		  	</div>
+		</div>
+	</body>
+```
+---
+![list-group.png](pictures/BootStrap/list-group.png)
++ 面板
+```html
+	<head>
+	<link 
+rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<style>
+		.sizePosition
+		{
+			width:250px;
+			height:350px;
+			margin:115px 10px 0 30px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#f5f5f5;
+			color:#000;
+			font-size:28px
+		}
+		.sizePosition>div + div{margin-top:-10px;}
+	</style>
+	<body>
+		<div class="sizePosition"><!-- 嵌入效果 -->
+			<div class="well well-lg">Hello World!</div>
+			<div class="well well">Hello World!</div>
+			<div class="well well-sm">Hello World!</div>
+		</div>
+
+		<div class="sizePosition"><!-- 面板 -->
+			<div class="panel panel-default">
+			  	<div class="panel-body">面板</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">面板标题</div>
+			  	<div class="panel-body">面板</div>
+			  	<div class="panel-footer">面板注脚</div>
+			</div>
+		</div>
+
+		<div class="sizePosition" style="font-size:18px;"><!-- 面板标题颜色 -->
+			<div class="panel panel-default">
+			  	<div class="panel-heading">面板标题</div>
+			</div>
+
+			<div class="panel panel-primary">
+			  	<div class="panel-heading">面板标题</div>
+			</div>
+
+			<div class="panel panel-success">
+			  	<div class="panel-heading">面板标题</div>
+			</div>
+
+			<div class="panel panel-info">
+			  	<div class="panel-heading">面板标题</div>
+			</div>
+
+			<div class="panel panel-warning">
+			  	<div class="panel-heading">面板标题</div>
+			</div>
+
+			<div class="panel panel-danger">
+			  	<div class="panel-heading">面板标题</div>
+			</div>
+		</div>
+
+		<div class="sizePosition"><!-- 面板+表格 -->
+			<div class="panel panel-success">
+				<div class="panel-heading">爱好汇总表</div>
+			  	<table class="table">
+			  		<tr><th>姓名</th><th>爱好</th>
+			  		<tr><td>Tanglong</td><td>飞翔</td></tr>
+			  		<tr><td>Sange</td><td>喝水</td></tr>
+			  	</table>
+			</div>
+		</div>
+
+		<div class="sizePosition"><!-- 面板+列表组 -->
+			<div class="panel panel-success">
+				<div class="panel-heading">水果</div>
+			  	<ul class="list-group">
+			  		<li class="list-group-item">西瓜</li>
+			  		<li class="list-group-item">波罗</li>
+			  		<li class="list-group-item">苹果</li>
+			  	</ul>
+			</div>
+		</div>
+	</body>
+```
+---
+![panel.png](pictures/BootStrap/panle.png)
