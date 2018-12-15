@@ -920,3 +920,199 @@ rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bo
 ```
 ---
 ![panel.png](pictures/BootStrap/panel.png)
++ 导航条
+```html
+	<head>
+	<link 
+ rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<style>
+		.sizePosition
+		{
+			width:460px;
+			height:330px;
+			margin:115px 10px 0 10px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#f5f5f5;
+			color:#000;
+			font-size:28px
+		}
+		.sizePosition>ul + ul{margin-top:10px;}
+	</style>
+	<body>
+		<div class="sizePosition"><!-- 导航 -->
+			<ul class="nav nav-tabs"><!-- 标签页 -->
+				<li role="presentation" class="active"><a href="#">首页</a></li>
+				<li role="presentation"><a href="#">文章</a></li>
+				<li role="presentation"><a href="#">评论</a></li>
+			</ul>
+
+			<ul class="nav nav-pills"><!-- 胶囊式标签页 -->
+			<li role="presentation" class="active"><a href="#">首页</a></li>
+			<li role="presentation" class="disabled"><a href="#">文章</a></li><!-- 禁用 -->
+			<li role="presentation"><a href="#">评论</a></li>
+			</ul>
+
+			<ul class="nav nav-pills"><!-- 与dropdown结合 -->
+				<li role="presentation" class="active"><a href="#">首页</a></li>
+				<li role="presentation" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" 
+					role="button" aria-haspopup="true" 
+					aria-expanded="false">文章<span class="caret"></span></a>
+				    <ul class="dropdown-menu">
+				    	<li><a href="#">科技</a></li>
+					    <li><a href="#">新闻</a></li>
+					    <li><a href="#">美食</a></li>
+				    </ul>
+				</li>
+				<li role="presentation"><a href="#">评论</a></li>
+			</ul>
+		</div>
+
+		<div class="sizePosition">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">首页</a>
+			    </div>
+
+			    <div class="collapse navbar-collapse"><!-- 折叠 -->
+	      			<ul class="nav navbar-nav"><!-- 列表 -->
+	      				<li class="active"><a href="#">文章</a></li>
+	      				<li class="disabled"><a href="#">关于</a></li>
+	      				<li><a href="#">其他</a></li>
+	      			</ul>
+
+	      			<form class="navbar-form navbar-left"><!-- 表单 -->
+				        <div class="form-group">
+				          <input type="text" class="form-control">
+				        </div>
+			        	<button type="submit" class="btn btn-default">提交</button>
+		      		</form>
+		      		<!-- 按钮 -->
+		      		<button type="button" class="btn btn-success navbar-btn">登录</button>
+		      		<!-- 文本 -->
+		      		<p class="navbar-text">文本</p>
+      		  	</div>
+			  </div>
+			</nav>
+
+			<!-- 路径导航 -->
+			<ol class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Articles</a></li>
+				<li class="active">bootstrap.pdf</li>
+			</ol>
+		</div>
+
+		<div class="sizePosition">
+			<!-- 固定在顶部 -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">固定在顶部</a>
+			    </div>
+			  </div>
+			</nav>
+
+			<!-- 静止在底部 -->
+			<!-- 通过添加 .navbar-static-top 类即可创建一个与
+				页面等宽度的导航条，它会随着页面向下滚动而消失。
+				还可以包含一个 .container 或 .container-fluid 容器，
+				用于将导航条居中对齐并在两侧添加内补（padding）。 -->
+			<nav class="navbar navbar-default navbar-static-top">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">静止在底部</a>
+			    </div>
+			  </div>
+			</nav>
+
+			<!-- 固定在底部 -->
+			<nav class="navbar navbar-default navbar-fixed-bottom">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">固定在底部</a>
+			    </div>
+			  </div>
+			</nav>
+
+			<!-- 反色导航条，字体颜色和背景色互换 -->
+			<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">反色导航条</a>
+			    </div>
+			  </div>
+			</nav>
+		</div>
+	</body>
+```
+---
+![nav.png](pictures/BootStrap/nav.png)
++ 提示框
+```html
+	<head>
+	<link 
+rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<style>
+		.sizePosition
+		{
+			width:250px;
+			height:350px;
+			margin:115px 10px 0 30px;
+			padding:10px;
+			float:left;
+			display:block;
+			background-color:#f5f5f5;
+			color:#000;
+			font-size:28px
+		}
+		.sizePosition>div{height:50px;font-size:25px;margin-bottom:8px;}
+	</style>
+	<body>
+		<div class="sizePosition"><!-- 警告框 -->
+			<div class="alert alert-success">成功</div>
+			<div class="alert alert-danger">危险</div>
+			<div class="alert alert-info">信息</div>
+			<div class="alert alert-warning">警告</div>
+			<div class="alert">默认</div>
+		</div>
+
+		<div class="sizePosition">
+		<div class="alert alert-success">
+	<!-- 关闭按钮 -->
+	<button class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+	成功
+	</div>
+
+		<div class="alert alert-success">
+			<a href="#" class="alert-link">链接</a>
+		</div>
+		</div>
+
+		<div class="sizePosition"><!-- 徽章 -->
+			<button class="btn btn-primary" type="button">
+			  未读信息<span class="badge" style="color:#fff;background-color:#f00;">4</span>
+			</button>
+		</div>
+
+		<div class="sizePosition"><!-- 标签 -->
+			<span class="label label-default">Default</span>
+			<span class="label label-primary">Primary</span>
+			<span class="label label-success">Success</span>
+			<span class="label label-info">Info</span>
+			<span class="label label-warning">Warning</span>
+			<span class="label label-danger">Danger</span>
+		</div>
+	</body>
+```
+---
+![alert.png](pictures/BootStrap/alert.png)
