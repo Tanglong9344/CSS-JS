@@ -48,7 +48,9 @@
 ```
 + 获取服务器文件根路径
 ```java
-		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+    HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder
+    				.getRequestAttributes())
+    				.getRequest();
     String rootPath = request.getScheme() + "://" 
                       + request.getServerName() 
                       + ":" + request.getServerPort() 
