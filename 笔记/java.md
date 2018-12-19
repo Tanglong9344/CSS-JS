@@ -12,7 +12,8 @@
         // 1. 设置响应类型
         response.setContentType("application/force-download");//应用程序强制下载
         // 2. 设置响应头
-        fileName = new String(fileName.getBytes("gbk"),"ISO8859-1");//解决中文乱码问题(根据http协议http header头要求其内容必须为iso8859-1编码)
+        //解决中文乱码问题(根据http协议http header头要求其内容必须为iso8859-1编码)
+        fileName = new String(fileName.getBytes("gbk"),"ISO8859-1");
         // 如果Header中没有定义则添加，如果已定义则用新的value覆盖原用value值
         // response.setHeader("Content-Disposition","attachment;filename=" + fileName);
         // 如果Header中没有定义则添加，如果已定义则保持原有value不改变
@@ -44,4 +45,12 @@
      } catch (Exception e) {
         e.printStackTrace();
     }
+```
++ 获取服务器文件根路径
+```java
+		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+    String rootPath = request.getScheme() + "://" 
+                      + request.getServerName() 
+                      + ":" + request.getServerPort() 
+                      + request.getContextPath();
 ```
