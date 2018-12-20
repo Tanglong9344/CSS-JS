@@ -198,3 +198,18 @@ for(var i=len;i>=0;i--){
 输出结果
 ---
 ![jsValCompare.png](pictures/jsValCompare.png)
++ input 文件限制大小
+```html
+<input type="file" id="fileName" onchange="checkFile()"/>
+```
+---
+```js
+function checkFile() {
+    var files = document.getElementById("fileName").files
+    console.log("file:\n",files[0])
+}
+```
++ 结果
+---
+![file.png](pictures/file.png)
+
