@@ -56,3 +56,7 @@
                       + ":" + request.getServerPort() 
                       + request.getContextPath();
 ```
++ request.getRealPath("/")的替代方法
+```java
+request.getSession().getServletContext().getRealPath(File.separator);
+```
