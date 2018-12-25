@@ -29,10 +29,11 @@
 ```js
 var frame = window.parent.document.getElementById("iframeId");
 fullscreen(frame);//全屏
+
 /** 默认按ESC退出全屏 */
 function fullscreen(element) {
     if (element.requestFullscreen) {
-        element.requestFullscreen();
+        element.requestFullscreen();//w3c
     } else if (element.mozRequestFullScreen) {
         element.mozRequestFullScreen();//firefox
     } else if (element.msRequestFullscreen) {
