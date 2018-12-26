@@ -25,22 +25,4 @@
 </form>
 <!-- submit将表单提交(form.submit())作为其onclick后的默认事件,使用submit时onclick可以不需要 -->
 ```
-+ 在iframe内部获取iframe
-```js
-var frame = window.parent.document.getElementById("iframeId");
-fullscreen(frame);//全屏
-
-/** 默认按ESC退出全屏 */
-function fullscreen(element) {
-    if (element.requestFullscreen) {
-        element.requestFullscreen();//w3c
-    } else if (element.mozRequestFullScreen) {
-        element.mozRequestFullScreen();//firefox
-    } else if (element.msRequestFullscreen) {
-        element.msRequestFullscreen();//ie
-    } else if (element.webkitRequestFullscreen) {
-        element.webkitRequestFullScreen();//google
-    }
-}
-```
 + [localStorage](http://www.w3school.com.cn/html5/html_5_webstorage.asp)
