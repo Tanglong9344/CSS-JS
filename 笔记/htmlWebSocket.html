@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>webSocket</title>
+    <script type="text/javascript">
+        function WebSocketTest() {
+            if ("WebSocket" in window) {
+                console.log("您的浏览器支持 WebSocket!");
+                // 打开一个 web socket
+                var ws = new WebSocket("ws://127.0.0.1:8080/websocket");
+                ws.onopen = function() {
+                    ws.send("客户端消息111");
+                    console.log("数据发送中...");
+                };
+
+                ws.onmessage = function (evt) {
+                    console.log("数据已接收...");
+                    console.log("Message from Server:\n" + evt.data)
+                };
+
+                ws.onclose = function() {
+                    console.log("连接已关闭...");
+                };
+            } else {
+                console.log("您的浏览器不支持 WebSocket!");
+            }
+        }
+    </script>
+</head>
+<body>
+<div><a href="javascript:WebSocketTest()">运行 WebSocket</a></div>
+</body>
+</html>
