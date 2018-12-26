@@ -212,4 +212,30 @@ function checkFile() {
 + 结果
 ---
 ![file.png](pictures/file.png)
++ 在iframe内部获取iframe 及全屏和全屏监听
+```js
+var frame = window.parent.document.getElementById("iframeId");
+fullscreen(frame);//全屏
 
+/** 默认按ESC退出全屏 */
+function fullscreen(element) {
+    if (element.requestFullscreen) {
+        element.requestFullscreen();//w3c
+    } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();//firefox
+    } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();//ie
+    } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullScreen();//google
+    }
+}
+
+/** 监听全屏事件webkitfullscreenchange是谷歌内核的事件；MSFullscreenChange是ie内核的事件 */
+document.addEventListener('webkitfullscreenchange', function fullscreenChange() {
+	if (document.fullscreenEnabled ||
+	    document.webkitIsFullScreen ||
+	    document.mozFullScreen ||
+	    document.msFullscreenElement) {}
+	    else {}
+}, false);
+```
