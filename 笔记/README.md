@@ -3,7 +3,6 @@
 + [Jquery](jquery.md)
 + [CSS](css.md)
 + [ajax、ajaxFileUpload](ajax.md)
-+ [java线程](thread.md)
 + [java 日期格式化格式](javaDateFormat.md)
 + [java：1.文件下载，2.@ResponseBody,3服务器根路径](java.md)
 + [标签](label.md)
