@@ -1,4 +1,4 @@
-# 深入理解BootStrap
+# 深入理解[BootStrap](http://www.bootcss.com/)
 + [BootStrap整体架构图](pictures/BootStrap/bootStrapStructure.png)
 + 响应式设计
   + 弹性网格(栅格系统)、布局和图片
