@@ -160,11 +160,11 @@
 	</body>
 ``` 
 ---
-![modal.png](pictures/BootStrap/modal.png)
+![modal.png](../pictures/BootStrap/modal.png)
 ---
-![shModal.png](pictures/BootStrap/shModal.png)
+![shModal.png](../pictures/BootStrap/shModal.png)
 ---
-![Varying-modal-content-based-on-trigger-button.png](pictures/BootStrap/Varying-modal-content-based-on-trigger-button.png)
+![Varying-modal-content-based-on-trigger-button.png](../pictures/BootStrap/Varying-modal-content-based-on-trigger-button.png)
 ---
 # 模态框事件
 |事件类型|描述|

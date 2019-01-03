@@ -123,7 +123,7 @@
 	</body>
 ```
 ---
-![popover.png](pictures/BootStrap/popover.png)
+![popover.png](../pictures/BootStrap/popover.png)
 # 事件类型
 |事件|描述|
 |:---:|:---:|

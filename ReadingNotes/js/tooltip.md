@@ -90,7 +90,7 @@
 	</body>
 ```
 ---
-![tooltip.png](pictures/BootStrap/tooltip.png)
+![tooltip.png](../pictures/BootStrap/tooltip.png)
 # tooltip事件类型
 |事件类型|描述|
 |:---:|:---:|
