@@ -9,6 +9,7 @@
 + [文本分列](column)
 + [文本溢出以省略号形式隐藏](overflow)
 + [有趣](somethingInteresting)
++ [canvas实现时钟](clock-canvas)
 
 ---
 ### 参考资料：
