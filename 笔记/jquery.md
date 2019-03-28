@@ -239,3 +239,29 @@ document.addEventListener('webkitfullscreenchange', function fullscreenChange() 
 	    else {}
 }, false);
 ```
++ 使用回调函数返回ajax获取的数据
+```js
+/** 在外部js文件中定义的函数 */
+function outDefinedFunc(parm1,callBack){
+    $.ajax
+    (
+        {
+            url:'',
+            dataType: 'json',
+            data:{parm1:parm1},
+            type: 'GET',
+            success: function (result,status) {
+                callBack(result);
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("error: " + errorThrown)
+            }
+        }
+    );
+}
+/** 调用函数 */
+ outDefinedFunc("",function(data){
+        console.log("data:",data)
+    })
+```
+
