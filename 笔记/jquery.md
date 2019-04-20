@@ -152,6 +152,8 @@ function moveDown(obj){
 15.[$(function(){})](http://www.w3school.com.cn/jquery/event_ready.asp)
 ```js
 $(function() {})是的$(document).ready(function(){})简写，也可以写成$().ready(function(){})
+与
+window.onload()=function(){}区别
 ```
 16.c标签与js函数
 ```js
