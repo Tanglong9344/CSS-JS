@@ -7,7 +7,7 @@
 + [元素拖放](drag)
 + [Input类型](input)
 + [文本分列](column)
-+ [文本溢出以省略号形式隐藏](overflow)
++ [文本溢出以省略号形式隐藏，放置鼠标显示全部](overflow)
 + [有趣](somethingInteresting)
 + [canvas实现时钟](clock-canvas)
 
