@@ -35,7 +35,7 @@
 ```
 + @ResponseBody
 ```java
- /*Spring中的"@ResponseBody"等价于一下代码*/
+ /*Spring中的"@ResponseBody"等价于以下代码*/
  try {
       response.setCharacterEncoding("utf-8");
       PrintWriter out = response.getWriter();
@@ -59,4 +59,23 @@
 + request.getRealPath("/")的替代方法
 ```java
 request.getSession().getServletContext().getRealPath(File.separator);
+```
++ Java编解码
+```java
+public class EncoderDecoder {
+    public static void main(String[] args) {
+        String str = "I am 唐龙";
+        try{
+            //编码
+            String afterEncoder = java.net.URLEncoder.encode(str,"utf-8");
+            System.out.println("afterEncoder:" + afterEncoder);
+
+            //解码
+            String afterDecoder = java.net.URLDecoder.decode(afterEncoder,"utf-8");
+            System.out.println("afterDecoder:" + afterDecoder);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+}
 ```
