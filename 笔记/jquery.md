@@ -6,12 +6,22 @@
    + 异步任务(后)
      + 微任务(先)(例如：Promise，process.nextTick)
      + 宏任务(后)(例如：setTimeout，setInterva)
-1. 非法字符(Illegal character)与网址链接相互转换的JS方法
-	+ encodeURI("非法字符")
-	+ decodeURI("网址链接")
-	+ 例子
-		+ encodeURI("哈喽")=%E5%93%88%E5%96%BD
-		+ encodeURI("%E5%93%88%E5%96%BD")=哈喽
+1. 编码
+```js
+var name="唐龙&+abc123,;";
+
+//escape()函数，将ASCII字母、数字、标点符号之外的其它字符转化为Unicode编码值，并在编码值前加上"%u"
+escape(name)//%u5510%u9F99%26+abc123%2C%3B
+unescape()//解码
+
+//encodeURI()函数，将特殊字符(0-9,a-z,A-Z,!,#,$,*,+,-,/等)之外的所有字符进行UTF-8编码，并在编码值前加上"%"
+encodeURI(name)//%E5%94%90%E9%BE%99&+abc123,;
+decodeURI()//解码
+
+//encodeURIComponent()函数，对除(0-9,a-z,A-Z,!,',(,),*,_,-,~)之外的所有字符进行UTF-8编码，并在编码值前加上"%"
+encodeURIComponent(name)//%E5%94%90%E9%BE%99%26%2Babc123%2C%3B
+decodeURIComponent()//解码
+```
 2. Jquery添加与移除html元素
 	+ $("#elementId").append("html content")
 	+ $("#elementId").html("")
@@ -73,32 +83,16 @@ f5 = Math.ceil(f5) // 向上取整， 结果4
 var f6 = 3.1415926;
 f6 = Math.floor(f6) // 向下取整， 结果3
 ```
-8.编码
-```js
-var name="唐龙&+abc123,;";
-
-//escape()函数，将ASCII字母、数字、标点符号之外的其它字符转化为Unicode编码值，并在编码值前加上"%u"
-escape(name)//%u5510%u9F99%26+abc123%2C%3B
-unescape()//解码
-
-//encodeURI()函数，将特殊字符(0-9,a-z,A-Z,!,#,$,*,+,-,/等)之外的所有字符进行UTF-8编码，并在编码值前加上"%"
-encodeURI(name)//%E5%94%90%E9%BE%99&+abc123,;
-decodeURI()//解码
-
-//encodeURIComponent()函数，对除(0-9,a-z,A-Z,!,',(,),*,_,-,~)之外的所有字符进行UTF-8编码，并在编码值前加上"%"
-encodeURIComponent(name)//%E5%94%90%E9%BE%99%26%2Babc123%2C%3B
-decodeURIComponent()//解码
-```
-9. [trigger()](http://www.w3school.com.cn/jquery/event_trigger.asp)
+8. [trigger()](http://www.w3school.com.cn/jquery/event_trigger.asp)
 ```js
 // trigger()用于出发元素的特定事件(select、change、click...)
 $("#elementId").trigger("change")
 ```
-10.[jQuery :eq() 选择器](http://www.w3school.com.cn/jquery/selector_eq.asp)
+9.[jQuery :eq() 选择器](http://www.w3school.com.cn/jquery/selector_eq.asp)
 ```js
 $("p:eq(0)") // 0表示第一个p元素
 ```
-11.父节点、子节点、兄弟节点
+10.父节点、子节点、兄弟节点
 ```js
 var elemenetId = $("#elementId")
 // 父节点
@@ -116,7 +110,7 @@ elemenetId.prev("#sibId")//上一个
 elemenetId.next("#sibId")//下一个
 elemenetId.siblings("#sibId")//所有
 ```
-12.元素上移与下移
+11.元素上移与下移
 ```html
 <p>P111<button onclick="moveOn(this)">上移</button><button onclick="moveDown(this)">下移</button></p>
 <p>P222<button onclick="moveOn(this)">上移</button><button onclick="moveDown(this)">下移</button></p>
@@ -137,22 +131,22 @@ function moveDown(obj){
 	if(nextObj){nextObj.after(parent)}
 }
 ```
-13.JSON & js Object
+12.JSON & js Object
 ```js
 1.JSON.parse() 方法:将JSON字符串解析为JSON对象
 2.$.parseJSON():将格式完好(符合严格的JSON格式)的JSON字符串转为与之对应的JavaScript对象
 3.JSON.stringify():将JSON对象解析为JSON字符串
 ```
-14.Jquery插件
+13.Jquery插件
 + [树插件zTree](http://www.treejs.cn/v3/api.php)
 ---
-15.[$(function(){})](http://www.w3school.com.cn/jquery/event_ready.asp)
+14.[$(function(){})](http://www.w3school.com.cn/jquery/event_ready.asp)
 ```js
 $(function() {})是的$(document).ready(function(){})简写，也可以写成$().ready(function(){})
 与
 window.onload()=function(){}区别
 ```
-16.c标签与js函数
+15.c标签与js函数
 ```js
 $(function () {
 	<c:set var="datas" value="'a','b','c'"/>
