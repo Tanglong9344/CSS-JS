@@ -77,20 +77,17 @@ f6 = Math.floor(f6) // 向下取整， 结果3
 ```js
 var name="唐龙&+abc123,;";
 
-var name1 = encodeURI(name)
-console.log("name1:" + name1)
-console.log("name12:" + decodeURI(name1))
+//escape()函数，将ASCII字母、数字、标点符号之外的其它字符转化为Unicode编码值，并在编码值前加上"%u"
+escape(name)//%u5510%u9F99%26+abc123%2C%3B
+unescape()//解码
 
-// 编码的字符范围更大
-var name2 = encodeURIComponent(name)
-console.log("name2:" + name2)
-console.log("name22:" + decodeURIComponent(name2))
+//encodeURI()函数，将特殊字符(0-9,a-z,A-Z,!,#,$,*,+,-,/等)之外的所有字符进行UTF-8编码，并在编码值前加上"%"
+encodeURI(name)//%E5%94%90%E9%BE%99&+abc123,;
+decodeURI()//解码
 
-// 输出结果：
-// name1:%E5%94%90%E9%BE%99&+abc123,;
-// name12:唐龙&+abc123,;
-// name2:%E5%94%90%E9%BE%99%26%2Babc123%2C%3B
-// name22:唐龙&+abc123,;
+//encodeURIComponent()函数，对除(0-9,a-z,A-Z,!,',(,),*,_,-,~)之外的所有字符进行UTF-8编码，并在编码值前加上"%"
+encodeURIComponent(name)//%E5%94%90%E9%BE%99%26%2Babc123%2C%3B
+decodeURIComponent()//解码
 ```
 9. [trigger()](http://www.w3school.com.cn/jquery/event_trigger.asp)
 ```js
