@@ -34,3 +34,4 @@ useCache默认为true，将查询结果进行二级缓存。
 
 flushCache默认为true，清空本地缓存和二级缓存。
 ```
+4.[动态sql](http://www.mybatis.org/mybatis-3/zh/dynamic-sql.html)
