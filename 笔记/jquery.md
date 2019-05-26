@@ -257,4 +257,12 @@ function outDefinedFunc(parm1,callBack){
         console.log("data:",data)
     })
 ```
-
++ Enter键登录
+```js
+    document.onkeydown = function(e){
+        if(!e) e = window.event;
+        if((e.keyCode || e.which) == 13){
+           //TODO：登录方法
+        }
+    }
+```
