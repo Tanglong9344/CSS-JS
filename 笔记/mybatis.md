@@ -35,3 +35,21 @@ useCache默认为true，将查询结果进行二级缓存。
 flushCache默认为true，清空本地缓存和二级缓存。
 ```
 4.[动态sql](http://www.mybatis.org/mybatis-3/zh/dynamic-sql.html)
+```xml
+<sql id="page">
+<if test="start!=null and end!=null">
+  <![CDATA[limit #{start},#{end}]]>
+</if>
+</sql>
+
+<sql id="condition">
+where deleted =0
+<if test="name!=null">
+  and name like CONCAT('%',<![CDATA[#{name}]]>,'%')
+</if>
+</sql>
+
+select * from table_name
+<include refid="condition"/>
+<include refid="page"/>
+```
