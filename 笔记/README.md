@@ -11,7 +11,7 @@
 + [jsp通过request获取url](requestUrl.md)
 + [input输入框事件的执行顺序](inputEvent.md)
 + [前后端交互](front-end.md)
-+ [插件](plug-in.md)
++ [插件&框架](plug-in.md)
 + [JSONObject](jsonObject.md)
 + [html5 WebSocket](websocket.md)
 + [maven](mvn.md)
