@@ -266,3 +266,10 @@ function outDefinedFunc(parm1,callBack){
         }
     }
 ```
++ 获取选中的checkbox后面的文本
+```js
+var vals = [];
+$("input[name='checkBoxName']:checked").each(function () {
+    vals.push($(this).next().text())
+})
+```
