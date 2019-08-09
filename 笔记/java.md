@@ -79,3 +79,37 @@ public class EncoderDecoder {
     }
 }
 ```
++ Excel导入
+```java
+public String goodsImport(MultipartHttpServletRequest multipartRequest) throws IOException{
+        CommonsMultipartFile file = (CommonsMultipartFile) multipartRequest.getFile("file");
+        System.out.println("fileName:"+file.getOriginalFilename());
+        HSSFWorkbook wb;
+        InputStream is=null;
+        try {
+            is = file.getInputStream();
+            POIFSFileSystem pSystem=new POIFSFileSystem(is);
+            wb=new HSSFWorkbook(pSystem);
+            if (wb != null) {
+                Sheet sheet = wb.getSheetAt(0);
+                for (int i=sheet.getFirstRowNum();i <=sheet.getLastRowNum();i++) {
+                    Row row = sheet.getRow(i);
+                    if(row==null)continue;
+                    for (int j=row.getFirstCellNum();j<row.getLastCellNum();j++) {
+                        String cellValue = row.getCell(j).getStringCellValue();
+                        System.out.println("value:"+cellValue);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if(is!=null){
+                is.close();
+            }
+        }
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("msg", "导入");
+        return jsonObject.toJSONString();
+    }
+```
