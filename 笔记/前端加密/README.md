@@ -1,5 +1,5 @@
 # 加密
-+ Md5加密
++ Md5加密(添加salt减少密码被破解风险)
    + [md5.js](md5.js)
    + 使用方法
    ```
@@ -11,7 +11,7 @@
    ```
    hex_sha1(str_to_be_encrypted)
    ```
-+ RSA加密
++ RSA加密(非对称加密)
    + [jsencrypt.js](jsencrypt.js)
    + 使用方法
    ```
