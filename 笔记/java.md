@@ -142,3 +142,10 @@ public String goodsImport(MultipartHttpServletRequest multipartRequest) throws I
     }
   }
   ```
++ 获取昨天的日期
+```java
+Calendar c = Calendar.getInstance();
+int date = c.get(Calendar.DATE);
+c.set(Calendar.DATE, date-1);
+Date yesterday = c.getTime();
+```
