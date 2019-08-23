@@ -113,3 +113,32 @@ public String goodsImport(MultipartHttpServletRequest multipartRequest) throws I
         return jsonObject.toJSONString();
     }
 ```
++ springMVC 定时器
+  + 配置SpringMVC配置文件
+    + 头部添加
+    ```xml
+    xmlns:task="http://www.springframework.org/schema/task"
+    ```
+    + xsi:schemaLocation里添加
+    ```xml
+    http://www.springframework.org/schema/task
+    http://www.springframework.org/schema/task/spring-task.xsd
+    ```
+    + 启动定时任务
+    ```xml
+    <task:annotation-driven/>
+    ```
+  + 创建定时任务类
+  ```java
+  import org.springframework.scheduling.annotation.Scheduled;
+  import org.springframework.stereotype.Component;
+  /** 定时任务类 */
+  @Component
+  public class TaskAction {
+    @Scheduled(cron = "0 45 21 * * ? ")
+    /** 每天21:45:00执行 */
+    public void task(){
+        System.out.println("this is a schedule task");
+    }
+  }
+  ```
