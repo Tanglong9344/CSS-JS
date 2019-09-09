@@ -277,7 +277,8 @@ $("input[name='checkBoxName']:checked").each(function () {
 ```js
     $('#formId').on('submit',function(e) {
         e.preventDefault()
-        var formData = $(this).serialize()
+        var formData = $(this).serialize()//序列化字符串
+	var formData = $(this).serializeArray()//序列化为数组对象
         $.ajax({
             url: 'url',
             type: 'post',
