@@ -273,3 +273,17 @@ $("input[name='checkBoxName']:checked").each(function () {
     vals.push($(this).next().text())
 })
 ```
++ 表单异步提交
+```js
+    $('#formId').on('submit',function(e) {
+        e.preventDefault()
+        var formData = $(this).serialize()
+        $.ajax({
+            url: 'url',
+            type: 'post',
+            data: formData,
+            dataType: 'json',
+            success: function (rs) {}
+        });
+    });
+```
