@@ -7,4 +7,4 @@
 + [BootStrap中文网](http://www.bootcss.com/)
 + [BootStrap DatePicker](https://www.malot.fr/bootstrap-datetimepicker)
 + [VueJs](vue.md)
-+ [Echart](echart.md)
++ [数据可视化](数据可视化.md)
