@@ -149,3 +149,7 @@ int date = c.get(Calendar.DATE);
 c.set(Calendar.DATE, date-1);
 Date yesterday = c.getTime();
 ```
++ PostConstruct注解
+```
+@PostConstruct 用于在依赖关系注入完成之后需要执行的方法上，以执行任何初始化(项目启动执行此方法)
+```
