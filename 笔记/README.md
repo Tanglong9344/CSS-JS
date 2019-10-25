@@ -4,7 +4,7 @@
 + [CSS](css.md)
 + [ajax、ajaxFileUpload](ajax.md)
 + [java 日期格式化格式](javaDateFormat.md)
-+ [java：1.文件下载，2.@ResponseBody,3服务器根路径](java.md)
++ [java：1.文件下载，2.excel导出,3服务器根路径,4.get,post](java.md)
 + [标签](label.md)
 + [console](console/README.md)
 + [Mybatis](mybatis.md)
