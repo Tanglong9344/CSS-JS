@@ -153,3 +153,86 @@ Date yesterday = c.getTime();
 ```
 @PostConstruct 用于在依赖关系注入完成之后需要执行的方法上，以执行任何初始化(项目启动执行此方法)
 ```
++ Java get请求(urlStr=url+params)
+```java
+/** GET请求 */
+    public static String httpRequestGet(String urlStr){
+        StringBuilder sb = new StringBuilder();
+        HttpURLConnection connection = null;
+        BufferedReader reader = null;
+        try{
+            URL url = new URL(urlStr);
+            connection = (HttpURLConnection)url.openConnection();
+            connection.connect();
+            reader = new BufferedReader(new InputStreamReader(connection.getInputStream(),"utf-8"));
+            String lines;
+            while((lines =reader.readLine())!=null){
+                sb.append(lines);
+            }
+            System.out.println("result:"+sb.toString());
+        } catch (IOException e){
+            e.printStackTrace();
+        } finally {
+            if (connection !=null){connection.disconnect();}
+            if (reader != null){
+                try{
+                    reader.close();
+                } catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+        return sb.toString();
+    }
+```
++ java post请求(参数格式:?a=1&b=2)
+```java
+ /** POST请求 */
+    public static String httpRequestPOST(String urlStr,String params) {
+        StringBuilder sb = new StringBuilder();
+        HttpURLConnection connection = null;
+        BufferedReader reader = null;
+        DataOutputStream dataout = null;
+        try {
+            URL url = new URL(urlStr);
+            // 1.将url以open方法返回的urlConnection
+            connection = (HttpURLConnection) url.openConnection();
+            // 2.设置连接输出流为true,默认false (post请求是以流的方式隐式的传递参数)
+            connection.setDoOutput(true);
+            // 3.设置连接输入流为true
+            connection.setDoInput(true);
+            // 4.设置请求方式为post
+            connection.setRequestMethod("POST");
+            // 5.post请求缓存设为false
+            connection.setUseCaches(false);
+            //6.设置请求头里面的各个属性,application/x-www-form-urlencoded
+            // application/json:json对象
+            connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+            //7.建立连接
+            connection.connect();
+            //8.输入输出流
+            dataout = new DataOutputStream(connection.getOutputStream());
+            //9.参数：json格式
+            dataout.write(params.getBytes());
+            dataout.flush();
+            //10.返回结果
+            reader = new BufferedReader(new InputStreamReader(connection.getInputStream(),"UTF-8"));
+            String lines;
+            while ((lines = reader.readLine()) != null) {
+                sb.append(lines);
+            }
+            System.out.println("result:"+sb.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (connection !=null){connection.disconnect();}
+            try{
+                if(dataout != null)dataout.close();
+                if(reader != null)reader.close();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        return sb.toString();
+    }
+```
